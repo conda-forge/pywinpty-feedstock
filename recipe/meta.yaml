@@ -25,6 +25,7 @@ requirements:
   run:
     - python
     - winpty
+    - vs2015_runtime
 
 test:
   imports:
