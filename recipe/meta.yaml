@@ -13,8 +13,7 @@ source:
 
 build:
   number: 0
-  skip: True  # [not (win and py3k)]
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  skip: True  # [not win]
 
 requirements:
   build:
@@ -22,6 +21,7 @@ requirements:
     - python
     - setuptools
     - winpty
+    - vc 14
   run:
     - python
     - winpty
