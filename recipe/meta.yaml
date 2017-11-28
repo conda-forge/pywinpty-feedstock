@@ -21,6 +21,7 @@ requirements:
     - python
     - setuptools
     - winpty
+    - backports.shutil_which  # [py2k]
     - vc 14
   run:
     - backports.shutil_which  # [py2k]
