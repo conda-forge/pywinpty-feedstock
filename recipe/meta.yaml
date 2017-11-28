@@ -25,6 +25,7 @@ requirements:
     - vc 14
   run:
     - backports.shutil_which  # [py2k]
+    - setuptools  # [py2k]
     - python
     - winpty
     - vs2015_runtime
