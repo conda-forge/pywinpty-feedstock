@@ -1,6 +1,6 @@
 {% set name = "pywinpty" %}
-{% set version = "0.5" %}
-{% set hash = "013e58a93079fb7bc72ba14dd6c86b473ea09797d94629eea1fe3c738f086ad2" %}
+{% set version = "0.5.2" %}
+{% set hash = "93253868414b9d0e8fb8e40c27c1f4e01d56e42e2d50b4619965aaeea8a1c084" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 2
+  number: 0
   skip: True  # [not win]
 
 requirements:
