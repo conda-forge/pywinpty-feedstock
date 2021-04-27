@@ -29,6 +29,7 @@ requirements:
   host:
     - python
     - pip
+    - winpty
   run:
     - python
     - winpty
