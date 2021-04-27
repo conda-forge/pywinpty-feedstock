@@ -25,11 +25,13 @@ requirements:
     - maturin
     - toml
     - pip
+    - winpty
   host:
     - python
     - pip
   run:
     - python
+    - winpty
 
 test:
   imports:
