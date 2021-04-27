@@ -7,15 +7,16 @@ Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pywinpty-feedstock/blob/master/LICENSE.txt)
 
-Summary: Python bindings for the winpty library
+Summary: Pseudoterminals for Windows in Python
 
 Development: https://github.com/spyder-ide/pywinpty
 
 Documentation: https://github.com/spyder-ide/pywinpty
 
-Python bindings for the winpty pseudo terminal library.
-It allows to create and communicate with Windows processes that print outputs
- and recieve inputs via console input and output pipes.
+PyWinpty allows creating and communicating with Windows processes that
+receive input and print outputs via console input and output pipes.
+PyWinpty supports both the native ConPTY interface and the previous,
+fallback winpty library.
 
 
 Current build status
