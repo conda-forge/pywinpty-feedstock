@@ -13,35 +13,38 @@ build:
   skip: true  # [not win]
 
 requirements:
+  build:
+    # - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - clang
+    - llvm
+    - rust
+    - llvmdev
+    - llvm-tools
+    - libclang
+    - maturin
+    - toml
+    - pip
   host:
-    - cython
     - python
     - pip
-    - winpty
-    - backports.shutil_which  # [py2k]
-    # use the m2w64 toolchain for all builds
-    - m2w64-toolchain
-    - libpython
   run:
-    - backports.shutil_which  # [py2k]
     - python
-    - winpty
-    - m2w64-gcc-libs
 
 test:
   imports:
-    # It hangs in Python 2
-    - winpty  # [not py2k]
+    - winpty
 
 about:
   home: https://github.com/spyder-ide/pywinpty
   license: MIT
   license_file: LICENSE.txt
-  summary: Python bindings for the winpty library
+  summary: Pseudoterminals for Windows in Python
   description: |
-    Python bindings for the winpty pseudo terminal library.
-    It allows to create and communicate with Windows processes that print outputs
-     and recieve inputs via console input and output pipes.
+    PyWinpty allows creating and communicating with Windows processes that
+    receive input and print outputs via console input and output pipes.
+    PyWinpty supports both the native ConPTY interface and the previous,
+    fallback winpty library.
   doc_url: https://github.com/spyder-ide/pywinpty
   dev_url: https://github.com/spyder-ide/pywinpty
 
