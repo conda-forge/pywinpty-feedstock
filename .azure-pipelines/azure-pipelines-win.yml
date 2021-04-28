@@ -5,7 +5,7 @@
 jobs:
 - job: win
   pool:
-    vmImage: vs2017-win2016
+    vmImage: windows-2019
   strategy:
     matrix:
       win_64_python3.6.____cpython:
@@ -81,7 +81,7 @@ jobs:
         call activate base
         run_conda_forge_build_setup
       displayName: conda-forge build setup
-    
+
 
     # Special cased version setting some more things!
     - script: |
