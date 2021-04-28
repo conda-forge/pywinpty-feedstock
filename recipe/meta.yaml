@@ -1,4 +1,4 @@
-{% set version = "0.5.7" %}
+{% set version = "1.0.0" %}
 
 package:
   name: pywinpty
@@ -6,42 +6,48 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pywinpty/pywinpty-{{ version }}.tar.gz
-  sha256: 2d7e9c881638a72ffdca3f5417dd1563b60f603e1b43e5895674c2a1b01f95a0
+  sha256: 76a8c1794eb9fe46081d78133960d72fd938fe1c86f78849173be6e52ce05bd9
 
 build:
-  number: 1
-  skip: True  # [not win]
+  number: 0
+  skip: true  # [not win]
 
 requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - clang
+    - llvm
+    - rust
+    - llvmdev
+    - llvm-tools
+    - libclang
+    - maturin
+    - toml
+    - pip
+    - winpty
   host:
-    - cython
     - python
     - pip
     - winpty
-    - backports.shutil_which  # [py2k]
-    # use the m2w64 toolchain for all builds
-    - m2w64-toolchain
-    - libpython
   run:
-    - backports.shutil_which  # [py2k]
     - python
     - winpty
-    - m2w64-gcc-libs
 
 test:
   imports:
-    # It hangs in Python 2
-    - winpty  # [not py2k]
+    - winpty
 
 about:
   home: https://github.com/spyder-ide/pywinpty
   license: MIT
   license_file: LICENSE.txt
-  summary: 'Python bindings for the winpty library'
+  summary: Pseudoterminals for Windows in Python
   description: |
-    Python bindings for the winpty pseudo terminal library.
-    It allows to create and communicate with Windows processes that print outputs
-     and recieve inputs via console input and output pipes.
+    PyWinpty allows creating and communicating with Windows processes that
+    receive input and print outputs via console input and output pipes.
+    PyWinpty supports both the native ConPTY interface and the previous,
+    fallback winpty library.
   doc_url: https://github.com/spyder-ide/pywinpty
   dev_url: https://github.com/spyder-ide/pywinpty
 
