@@ -22,7 +22,7 @@ requirements:
     - llvmdev
     - llvm-tools
     - libclang
-    - maturin <=0.9.1
+    - maturin <=0.12.0
     - toml
     - pip
     - winpty
