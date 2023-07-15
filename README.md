@@ -1,11 +1,11 @@
-About pywinpty
-==============
+About pywinpty-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pywinpty-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/spyder-ide/pywinpty
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pywinpty-feedstock/blob/main/LICENSE.txt)
 
 Summary: Pseudoterminals for Windows in Python
 
