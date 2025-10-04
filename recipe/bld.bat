@@ -3,6 +3,7 @@ mkdir tmpbuild_%PY_VER%
 set TEMP=%CD%\tmpbuild_%PY_VER%
 REM Print Rust version
 rustc --version
+set PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1
 REM Install cargo-license
 set CARGO_HOME=%BUILD_PREFIX%\cargo
 mkdir %CARGO_HOME%
