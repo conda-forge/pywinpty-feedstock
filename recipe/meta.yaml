@@ -9,9 +9,8 @@ source:
   sha256: 61db0db063de9865adbea66db294628f8577f608d9764a4c7d3384eeacc4e81b
 
 build:
-  number: 1
-  skip: true  # [not win]
-  skip: true  # [py<310]
+  number: 2
+  skip: true  # [not win or py<310]
 
 requirements:
   build:
@@ -45,7 +44,9 @@ test:
 about:
   home: https://github.com/spyder-ide/pywinpty
   license: MIT
-  license_file: LICENSE.txt
+  license_file:
+    - LICENSE.txt
+    - {{ RECIPE_DIR }}/library_licenses/
   summary: Pseudoterminals for Windows in Python
   description: |
     PyWinpty allows creating and communicating with Windows processes that
