@@ -1,4 +1,4 @@
-{% set version = "3.0.5" %}
+{% set version = "3.1.0" %}
 
 package:
   name: pywinpty
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/p/pywinpty/pywinpty-{{ version }}.tar.gz
-  sha256: 61db0db063de9865adbea66db294628f8577f608d9764a4c7d3384eeacc4e81b
+  sha256: 14595b68054d61f2f1e90cc2b30be47be201de200ae1851c433d8cded101bce0
 
 build:
-  number: 2
+  number: 0
   skip: true  # [not win or py<310]
 
 requirements:
